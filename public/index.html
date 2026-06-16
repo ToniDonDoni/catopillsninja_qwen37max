@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Kitty Catcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <video id="camera-feed" autoplay playsinline></video>
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="score-display">
+        <span class="neon-text">SCORE: </span>
+        <span id="score" class="neon-text neon-score">0</span>
+      </div>
+      <div id="lives-display">
+        <span class="neon-text">LIVES: </span>
+        <span id="lives" class="neon-text neon-lives">3</span>
+      </div>
+      <div id="combo-display">
+        <span id="combo" class="neon-text neon-combo"></span>
+      </div>
+    </div>
+    <div id="start-screen" class="screen">
+      <h1 class="neon-title">NEON KITTY<br>CATCHER</h1>
+      <p class="neon-subtitle">Catch the cats with your finger!</p>
+      <button id="start-btn" class="neon-btn">START GAME</button>
+      <p class="neon-hint">Allow camera access to play</p>
+    </div>
+    <div id="game-over-screen" class="screen hidden">
+      <h1 class="neon-title game-over-title">GAME OVER</h1>
+      <p class="neon-subtitle">Final Score: <span id="final-score">0</span></p>
+      <button id="restart-btn" class="neon-btn">PLAY AGAIN</button>
+    </div>
+    <div id="finger-indicator"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "neon-kitty-catcher",
+  "version": "1.0.0",
+  "description": "A neon-themed browser game where you catch cats with finger tracking and transform them into pills",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "npx playwright test",
+    "test:report": "npx playwright show-report"
+  },
+  "keywords": ["game", "finger-tracking", "neon", "cats"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.42.0"
+  }
+}
